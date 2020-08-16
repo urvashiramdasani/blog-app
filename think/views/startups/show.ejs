@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+
+<div class="container">
+	<p></p>
+	<img style="width:100%" class="ui centered rounded image" src="<%= startup.image %>">
+	<hr>
+	<h1><%= startup.name%></h1>
+	<div class="description">
+		<p><%= startup.description %></p>
+	</div>
+	<div class="row">
+		<a href="/startups/<%= startup._id %>/edit" class="btn btn-light">Edit</a>
+		<form id="delete" method="POST" action="/startup/<%= startup._id %>?_method=DELETE">
+			<button type="button" class="btn btn-danger">Delete</button>
+		</form>
+	</div>
+	<p></p>
+</div>
+<%- include('../partials/footer') %>
